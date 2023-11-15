@@ -18,7 +18,7 @@ export const Container = styled.div`
   
   .like-btn {
     
-    .active {
+    &.active {
       font-weight: bold;
       color: red;
     }

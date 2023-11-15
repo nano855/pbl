@@ -14,12 +14,15 @@ import AiFilm from './routes/AiFilm/AiFilm';
 import MovieDetail from './routes/AiFilm/MovieDetail';
 import MovieHome from './routes/AiFilm/MovieHome';
 import MovieLiked from './routes/AiFilm/MovieLiked';
+import MovieContextProvider from "./routes/AiFilm/context/MovieContext";
+import LikeContextProvider from "./routes/AiFilm/context/LikeContext";
 
 function App() {
     const MyComponenetwithTracker = withClickTracker(component);
     return (
         <>
-
+          <MovieContextProvider>
+            <LikeContextProvider>
             <Navbar/>
             <Routes>
                 <Route path="/" element={<Home/>}/>
@@ -35,7 +38,8 @@ function App() {
                 </Route>
             </Routes>
 
-
+            </LikeContextProvider>
+          </MovieContextProvider>
             <MyComponenetwithTracker/>
             <Modal>
                 <p>Contenu de la modal</p>

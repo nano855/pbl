@@ -7,7 +7,6 @@ const ChangeLanguage = ({ language, changeLanguage }) => {
     const {t} = useTranslation()
     return (
         <>
-            <p>{t('logout')}</p>
             <LanguageBtnStyled onClick={() => changeLanguage('en')}>En</LanguageBtnStyled>
             <LanguageBtnStyled onClick={() => changeLanguage('fr')}>Fr</LanguageBtnStyled>
         </>

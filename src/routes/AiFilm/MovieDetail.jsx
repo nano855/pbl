@@ -9,7 +9,6 @@ const MovieDetail = () => {
     const MyMovie = movies.filter(movie=> {
         return parseInt(movie.id) === parseInt(id)
     })[0]
-    console.log(MyMovie);
     return (
         <>
             <Link to={'../'}>Retour</Link>

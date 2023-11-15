@@ -4,15 +4,15 @@ import { Container } from './MovieHome.style.jsx';
 import { MovieContext } from './context/MovieContext';
 
 const MovieHome = () => {
-
     const { movies } = useContext(MovieContext);
-
     return (
-        <Container>
-            {movies.map((movie, index) => (
-                <MovieCard movie={movie} key={index}/>
-            ))}
-        </Container>
+        <>
+            <Container>
+                {movies.map((movie, index) => (
+                    <MovieCard movie={movie} key={index}/>
+                ))}
+            </Container>
+        </>
     );
 };
 

@@ -1,4 +1,4 @@
-import { createContext, useEffect, useState } from 'react';
+import { createContext, useEffect, useState, useContext } from 'react';
 
 export const MovieContext = createContext([])
 
@@ -23,7 +23,7 @@ const MovieContextProvider = ({children}) => {
             .catch(err => {
                 console.error(err)
             });
-    },[])
+    }, [])
     const value = {movies, setMovies}
     return <MovieContext.Provider value={value}>{children}</MovieContext.Provider>
 }
