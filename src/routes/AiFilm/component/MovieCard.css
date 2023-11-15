@@ -1,0 +1,25 @@
+.movie-card {
+    max-width: 23%;
+
+
+}
+
+.movie-img {
+    max-height: 300px;
+    overflow: hidden;
+}
+.movie-card img {
+    object-fit: contain;
+}
+
+footer{
+    display: flex;
+    justify-content: space-between;
+}
+.detail-btn{
+
+}
+
+.like-btn{
+
+}

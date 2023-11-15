@@ -10,7 +10,10 @@ import Team from './component/Team';
 import withClickTracker from './Hoc';
 import component from './component/component';
 import Modal from './Portal';
-
+import AiFilm from './routes/AiFilm/AiFilm';
+import MovieDetail from './routes/AiFilm/MovieDetail';
+import MovieHome from './routes/AiFilm/MovieHome';
+import MovieLiked from './routes/AiFilm/MovieLiked';
 
 function App() {
     const MyComponenetwithTracker = withClickTracker(component);
@@ -25,6 +28,11 @@ function App() {
                 <Route path="/about" element={<About/>}/>
                 <Route path="/services" element={<Services/>}/>
                 <Route path="/contact" element={<Contact/>}/>
+                <Route path="/ai-film" element={<AiFilm/>}>
+                    <Route index element={<MovieHome/>}/>
+                    <Route path="detail-film/:id" element={<MovieDetail />}/>
+                    <Route path="liked" element={<MovieLiked />}/>
+                </Route>
             </Routes>
 
 
