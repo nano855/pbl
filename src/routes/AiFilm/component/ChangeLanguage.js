@@ -1,12 +1,15 @@
-import { changeLanguage } from 'i18next';
+import { changeLanguage } from '../redux/langActions';
 import { connect } from 'react-redux';
+import { LanguageBtnStyled } from './ChangeLanguage.style';
+import { useTranslation } from 'react-i18next';
 
-function ChangeLanguage({ language, changeLanguage }) {
-
+const ChangeLanguage = ({ language, changeLanguage }) => {
+    const {t} = useTranslation()
     return (
         <>
-            <span onClick={() => changeLanguage('en')}>En</span>
-            <span onClick={() => changeLanguage('fr')}>Fr</span>
+            <p>{t('logout')}</p>
+            <LanguageBtnStyled onClick={() => changeLanguage('en')}>En</LanguageBtnStyled>
+            <LanguageBtnStyled onClick={() => changeLanguage('fr')}>Fr</LanguageBtnStyled>
         </>
     );
 }
