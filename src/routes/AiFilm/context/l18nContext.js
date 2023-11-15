@@ -5,12 +5,14 @@ i18n.use(initReactI18next).init({
     resources: {
         en: {
             translation: {
-                logout: 'Logout'
+                logout: 'Logout',
+                login: 'Signin'
             }
         },
         fr: {
             translation: {
-                logout: 'Déconnexion'
+                logout: 'Déconnexion',
+                login: 'Se connecter'
             }
         },
     },

@@ -3,6 +3,7 @@ import MovieContextProvider from './context/MovieContext';
 import { Container } from './AiFilm.style.jsx';
 import { useTranslation } from 'react-i18next';
 import ChangeLanguage from './component/ChangeLanguage';
+import LanguageSelector from './component/LanguageSelector';
 //import { useContext } from 'react';
 
 
@@ -22,6 +23,8 @@ const AiFilm = () => {
                         <Link className="nav-link like-btn" to="/liked">Like</Link>
                         <Link className="nav-link" to="/logout">{t('logout')}</Link>
                         <ChangeLanguage />
+                        <LanguageSelector />
+                        
                         </div>
                     </nav>
                     <div className="container">

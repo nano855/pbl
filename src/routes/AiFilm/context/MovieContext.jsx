@@ -18,7 +18,7 @@ const MovieContextProvider = ({children}) => {
         fetch(url, options)
             .then(response => response.json())
             .then(response => {
-                setMovies(response.results);
+                setMovies(response.results); 
             })
             .catch(err => {
                 console.error(err)
